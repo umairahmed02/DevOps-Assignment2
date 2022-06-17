@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: umairahmeddevopsassignment 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: umairahmeddevopsassignment
+  template:
+    metadata:
+      labels:
+        app: umairahmeddevopsassignment 
+    spec:
+      containers:
+        - name: umairahmeddevopsassignment 
+          image: kubernetesregistryagain.azurecr.io/umairahmeddevopsassignment
+          ports:
+          - containerPort: 80
